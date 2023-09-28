@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/projects/smart_journalism/static/css/main.c63cd93d.css",
+    "main.js": "/projects/smart_journalism/static/js/main.62946410.js",
+    "static/media/logmediaadmin.jpg": "/projects/smart_journalism/static/media/logmediaadmin.735f9ffc1d0676bcd731.jpg",
+    "static/media/about-2.jpg": "/projects/smart_journalism/static/media/about-2.068c731594cfc3bb8f1e.jpg",
+    "static/media/carousel-2.jpg": "/projects/smart_journalism/static/media/carousel-2.070aa2cb27ea7a1e72f7.jpg",
+    "static/media/carousel-3.jpg": "/projects/smart_journalism/static/media/carousel-3.2891a00066fdfafdc66e.jpg",
+    "static/media/carousel-1.jpg": "/projects/smart_journalism/static/media/carousel-1.83d2eaae0f540a46d536.jpg",
+    "static/media/about-1.jpg": "/projects/smart_journalism/static/media/about-1.925d94e5cfb1c0d6d4fe.jpg",
+    "static/media/bg.jpg": "/projects/smart_journalism/static/media/bg.d6a200e3f28660efe265.jpg",
+    "static/media/logjournalist.jpg": "/projects/smart_journalism/static/media/logjournalist.72d3d69bf1e9afa01a63.jpg",
+    "index.html": "/projects/smart_journalism/index.html",
+    "main.c63cd93d.css.map": "/projects/smart_journalism/static/css/main.c63cd93d.css.map",
+    "main.62946410.js.map": "/projects/smart_journalism/static/js/main.62946410.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c63cd93d.css",
+    "static/js/main.62946410.js"
+  ]
+}
