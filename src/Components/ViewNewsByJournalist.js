@@ -15,7 +15,7 @@ function ViewNewsByJournalist() {
 
   useEffect(() => {
     axiosInstance
-      .post(`/viewNewsByJournalist/${localStorage.getItem("journalistid")}`)
+      .post(`/viewNewsByJid/${localStorage.getItem("journalistid")}`)
       .then((res) => {
         console.log(res);
         if (res.data.data != undefined) {

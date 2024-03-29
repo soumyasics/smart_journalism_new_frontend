@@ -38,7 +38,9 @@ function RegJournalist() {
         console.log(res);
         if (res.data.status == 200) {
           // alert(res.data.msg);
-          Navigate(`/Verification/${res.data.data._id}`);
+          // Navigate(`/Verification/${res.data.data._id}`);
+          Navigate('/home')
+
         }
       })
       .catch((err) => {

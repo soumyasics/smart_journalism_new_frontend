@@ -21,6 +21,7 @@ function LogJournalist() {
     axiosInstance
       .post(`/loginJournalist`, data)
       .then((res) => {
+        console.log(res);
         if (res.data.status == 200) {
           window.location.reload(false);
         } else {

@@ -21,6 +21,7 @@ function LogMediaAdmin() {
 
 	const subfn = (e)=>{
 		e.preventDefault()
+    console.log("data",data);
 		axiosInstance.post(`/loginMedia`, data)
 		.then((res)=>{
 			console.log(res);

@@ -47,7 +47,8 @@ function AddJournalistbyMedia() {
       .then((res) => {
         console.log(res);
         if (res.data.status == 200) {
-          Navigate(`/Verification/${res.data.data._id}`);
+          // Navigate(`/Verification/${res.data.data._id}`);
+          Navigate("/home")
         }
       })
       .catch((err) => {

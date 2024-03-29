@@ -8,31 +8,32 @@ function VerificationMedia() {
   const [data, setdata] = useState("");
 
   useEffect(() => {
-    axiosInstance
-      .post(`/sendKeyMedia/${id}`)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    // axiosInstance
+    //   .post(`/sendKeyMedia/${id}`)
+    //   .then((res) => {
+    //     console.log(res);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
   }, []);
 
   const subfn = (e) => {
     e.preventDefault();
     console.log(data);
-    axiosInstance
-      .post(`/verifyKeyMedia/${id}`, { key: data })
-      .then((res) => {
-        console.log(res, "key approved");
-        if (res.data.status == 200) {
-          alert("Verified");
-          Navigate("/home");
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    // axiosInstance
+    //   .post(`/verifyKeyMedia/${id}`, { key: data })
+    //   .then((res) => {
+    //     console.log(res, "key approved");
+    //     if (res.data.status == 200) {
+    //       alert("Verified");
+    //       Navigate("/home");
+    //     }
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+    Navigate("/home");
   };
   return (
     <div style={{ height: "450px" }}>
