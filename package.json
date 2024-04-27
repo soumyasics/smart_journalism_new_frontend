@@ -2,7 +2,7 @@
   "name": "smartjournalism",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://43.204.92.123/projects/smart_journalism",
+  "homepage": "http://hybrid.srishticampus.in/smart_journalism/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

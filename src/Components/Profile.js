@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axiosInstance from "../baseurl";
 
@@ -11,6 +11,7 @@ function Profile() {
   });
 
   const Navigate = useNavigate();
+
 
   useEffect(() => {
     if (localStorage.getItem("journalistid") == null) {
@@ -383,7 +384,7 @@ function Profile() {
                               </div>
                             </div>
                             <div class="col-12">
-                              {/* <div className="mb-3"> <img src={`http://localhost:4001/${data.img.filename}`} height={100}/></div> */}
+                              {/* <div className="mb-3"> <img src={`${url}/${data.img.filename}`} height={100}/></div> */}
                               <div class="mb-3">
                                 <label for="formFile" class="form-label">
                                   Upload your Image

@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axiosInstance from "../baseurl";
 import { Link, useNavigate } from "react-router-dom";
 
-function ViewSavedNews() {
+function ViewSavedNews({url}) {
   const [savednews, setsavednews] = useState([]);
   const [test, settest] = useState("");
 
   const Navigate = useNavigate();
+
 
   useEffect(() => {
     if (localStorage.getItem("publiclogid") == null) {
@@ -55,7 +56,7 @@ function ViewSavedNews() {
                   <div className="col-4" style={{margin:"15px 0px"}}>
                     <div class="card">
                       <img
-                        src={`http://localhost:4001/${a.nid.image}`}
+                        src={`${url}/${a.nid.image}`}
                         class="card-img-top"
                         alt="..."
                       />

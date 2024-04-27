@@ -51,7 +51,7 @@ function JournalistHome() {
             id="btnr1"
             autocomplete="off"
           />
-          <label class="btn btn-outline-danger" for="btnr1">
+          <label class="btn btn-danger" for="btnr1">
             All Category
           </label>
 
@@ -66,7 +66,7 @@ function JournalistHome() {
             id="btnr2"
             autocomplete="off"
           />
-          <label class="btn btn-outline-danger" for="btnr2">
+          <label class="btn btn-danger" for="btnr2">
             Politics
           </label>
 
@@ -81,7 +81,7 @@ function JournalistHome() {
             id="btnr3"
             autocomplete="off"
           />
-          <label class="btn btn-outline-danger" for="btnr3">
+          <label class="btn btn-danger" for="btnr3">
             Kerala
           </label>
 
@@ -96,7 +96,7 @@ function JournalistHome() {
             id="btnr4"
             autocomplete="off"
           />
-          <label class="btn btn-outline-danger" for="btnr4">
+          <label class="btn btn-danger" for="btnr4">
             India
           </label>
 
@@ -116,7 +116,7 @@ function JournalistHome() {
           />
 
           
-          <label class="btn btn-outline-danger" for="btnr5">
+          <label class="btn btn-danger" for="btnr5">
             World
           </label>
 
@@ -131,7 +131,7 @@ function JournalistHome() {
             id="btnr6"
             autocomplete="off"
           />
-          <label class="btn btn-outline-danger" for="btnr6">
+          <label class="btn btn-danger" for="btnr6">
             Business
           </label>
 
@@ -146,7 +146,7 @@ function JournalistHome() {
             id="btnr7"
             autocomplete="off"
           />
-          <label class="btn btn-outline-danger" for="btnr7">
+          <label class="btn btn-danger" for="btnr7">
             Sports
           </label>
         </div>
@@ -154,7 +154,7 @@ function JournalistHome() {
       {/* <hr/> */}
       <div class="container text-center">
         <div class="row">
-          <div class="col-2"
+          <div class="col-2 mt-3"
             style={{
               height: "700px",
               background: "white",
@@ -179,7 +179,7 @@ function JournalistHome() {
               }}
             />
             <label
-              class="btn btn-outline-danger"
+              class="btn btn-danger"
               for="all"
               style={{ width: "150px" }}
             >
@@ -201,7 +201,7 @@ function JournalistHome() {
                     }}
                   />
                   <label
-                    class="btn btn-outline-danger"
+                    class="btn btn-danger"
                     for={a._id}
                     style={{ width: "150px" }}
                   >
@@ -222,7 +222,7 @@ function JournalistHome() {
               }}
             />
             <label
-              class="btn btn-outline-danger"
+              class="btn btn-danger"
               for="freelance"
               style={{ width: "150px" }}
             >

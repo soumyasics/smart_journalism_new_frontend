@@ -59,34 +59,47 @@ function AddJournalistbyMedia() {
     <div style={{ minHeight: "1500px" }}>
       <div className="container">
         <div className="row">
-          <div className="col-6">
+          <div className="col-5">
             <img 
             width={510}
             height={450}
               src={` https://img.freepik.com/premium-vector/tv-reporter-operator-illustration_107173-14273.jpg`}
             />
             <img
-            width={600} 
+            width={510} 
             height={600}
+            style={{objectFit:'cover'}}
               src={`https://cdn.dribbble.com/users/1119336/screenshots/8195178/media/07c277b3748fe9f0c128ddde9fe14590.png?resize=1000x750&vertical=center`}
             />
           </div>
-          <div className="col-6
+          <div className="col-7
           ">
             <div className="formcontainer">
               <div class="wrapper wrapper--w680">
                 <div class="card card-4">
                   <div class="card-body">
-                    <h2 class="title">Add a new Journalist</h2>
+                    <h2 class="title text-danger ">Add a new Journalist</h2>
                     <form onSubmit={subfn}>
                       <div class="row row-space">
-                        <div class="col-12">
+                        <div class="col-6">
                           <div class="input-group">
                             <label class="label"> Name</label>
                             <input
                               class="input--style-4"
                               type="text"
                               name="name"
+                              onChange={changefn}
+                              required
+                            />
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="input-group">
+                            <label class="label"> Email</label>
+                            <input
+                              class="input--style-4"
+                              type="email"
+                              name="email"
                               onChange={changefn}
                               required
                             />
@@ -136,7 +149,7 @@ function AddJournalistbyMedia() {
                             Other
                           </label>
                         </div>
-                        <div class="col-12">
+                        <div class="col-6">
                           <div class="input-group">
                             <label class="label"> City</label>
                             <input
@@ -148,7 +161,7 @@ function AddJournalistbyMedia() {
                             />
                           </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-6">
                           <div class="input-group">
                             <label class="label"> Contact</label>
                             <input
@@ -162,19 +175,8 @@ function AddJournalistbyMedia() {
                             />
                           </div>
                         </div>
-                        <div class="col-12">
-                          <div class="input-group">
-                            <label class="label"> Email</label>
-                            <input
-                              class="input--style-4"
-                              type="email"
-                              name="email"
-                              onChange={changefn}
-                              required
-                            />
-                          </div>
-                        </div>
-                        <div class="col-12">
+                        
+                        <div class="col-6">
                           <div class="input-group">
                             <label class="label">Password</label>
                             <input
@@ -186,7 +188,7 @@ function AddJournalistbyMedia() {
                             />
                           </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-6">
                           <div class="input-group">
                             <label class="label"> Employee ID</label>
                             <input

@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axiosInstance from "../baseurl";
 import { Link, useNavigate } from "react-router-dom";
 
-function ViewMyNewsMedia() {
+function ViewMyNewsMedia({url}) {
   const Navigate = useNavigate();
+
 
   const [data,setdata] = useState([])
 
@@ -55,7 +56,7 @@ function ViewMyNewsMedia() {
                     <div className="row">
                       <div className="col-5">
                         <img
-                          src={`http://localhost:4001/${a.image}`}
+                          src={`${url}/${a.image}`}
                           alt=""
                           height={290}
                           width={`100%`}
@@ -92,7 +93,7 @@ function ViewMyNewsMedia() {
                 </div>
               );
               })
-            : null}
+            : <h1 className="text-center p-5" >No News Found</h1>}
         </div>
       </div>
     </div>

@@ -67,16 +67,28 @@ function RegJournalist() {
           <div class="wrapper wrapper--w680">
             <div class="card card-4">
               <div class="card-body">
-                <h2 class="title">Journalist Registration Form</h2>
+                <h2 class="title text-danger">Journalist Registration Form</h2>
                 <form onSubmit={subfn}>
                   <div class="row row-space">
-                    <div class="col-12">
+                    <div class="col-6">
                       <div class="input-group">
                         <label class="label"> Name</label>
                         <input
                           class="input--style-4"
                           type="text"
                           name="name"
+                          onChange={changefn}
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="input-group">
+                        <label class="label"> Email</label>
+                        <input
+                          class="input--style-4"
+                          type="email"
+                          name="email"
                           onChange={changefn}
                           required
                         />
@@ -126,7 +138,7 @@ function RegJournalist() {
                         Other
                       </label>
                     </div>
-                    <div class="col-12">
+                    <div class="col-6">
                       <div class="input-group">
                         <label class="label"> City</label>
                         <input
@@ -138,7 +150,7 @@ function RegJournalist() {
                         />
                       </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-6">
                       <div class="input-group">
                         <label class="label"> Contact</label>
                         <input
@@ -152,19 +164,8 @@ function RegJournalist() {
                         />
                       </div>
                     </div>
-                    <div class="col-12">
-                      <div class="input-group">
-                        <label class="label"> Email</label>
-                        <input
-                          class="input--style-4"
-                          type="email"
-                          name="email"
-                          onChange={changefn}
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div class="col-12">
+                    
+                    <div class="col-6">
                       <div class="input-group">
                         <label class="label">Password</label>
                         <input
@@ -176,7 +177,40 @@ function RegJournalist() {
                         />
                       </div>
                     </div>
-                    <div class="col-12">
+
+                    <div class="col-6">
+                      <div class="input-group">
+                        <label class="label">Age</label>
+                        <input
+                          class="input--style-4"
+                          type="number"
+                          name="age"
+                          min="1"
+                          onChange={changefn}
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="input-group">
+                        <select
+                          class="form-select"
+                          name="highesteducation"
+                          required
+                          onChange={changefn}
+                        >
+                          <option value="">Educational Qualification</option>
+                          <option value="High School">High School</option>
+                          <option value="Bachelor's Degree">
+                            Bachelor's Degree
+                          </option>
+                          <option value="Master's Degree">
+                            Master's Degree
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-6">
                       <div class="input-group">
                         <select
                           class="form-select"
@@ -196,19 +230,7 @@ function RegJournalist() {
                         </select>
                       </div>
                     </div>
-                    <div class="col-12">
-                      <div class="input-group">
-                        <label class="label">Age</label>
-                        <input
-                          class="input--style-4"
-                          type="number"
-                          name="age"
-                          min="1"
-                          onChange={changefn}
-                          required
-                        />
-                      </div>
-                    </div>
+                    
                     <div class="col-12">
                       <div class="mb-3">
                         <label
@@ -227,25 +249,7 @@ function RegJournalist() {
                         ></textarea>
                       </div>
                     </div>
-                    <div class="col-12">
-                      <div class="input-group">
-                        <select
-                          class="form-select"
-                          name="highesteducation"
-                          required
-                          onChange={changefn}
-                        >
-                          <option value="">Educational Qualification</option>
-                          <option value="High School">High School</option>
-                          <option value="Bachelor's Degree">
-                            Bachelor's Degree
-                          </option>
-                          <option value="Master's Degree">
-                            Master's Degree
-                          </option>
-                        </select>
-                      </div>
-                    </div>
+                   
                     <div class="col-12">
                       <div class="mb-3">
                         <label for="formFile" class="form-label">

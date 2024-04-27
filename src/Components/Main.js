@@ -1,12 +1,20 @@
-import React, { useEffect, useState } from "react";
-
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import JournalistHome from "./JournalistHome";
 import axiosInstance from "../baseurl";
 import PublicHome from "./PublicHome";
+import pro8 from "../Assets/images/pro8.jpg";
+import pro3 from "../Assets/images/pro3.jpg";
+import pro4 from "../Assets/images/pro4.jpg";
+import pro5 from "../Assets/images/pro5.jpg";
+import pro9 from "../Assets/images/pro9.jpg";
+import img11 from "../Assets/images/img11.jpg";
+import About from "./About";
+import { ContextWrap } from "../App";
 
 function Main({ auth }) {
   const [homenews, sethnews] = useState([]);
+  const url=useContext(ContextWrap)
 
   useEffect(() => {
     axiosInstance
@@ -24,189 +32,119 @@ function Main({ auth }) {
 
   if (auth == 0) {
     console.log(homenews.length);
-    if (homenews.length > 12) {
+    if (homenews.length) {
       return (
-        <div
-          className="maindiv"
-          style={{ padding: "30px", borderRadius: "40px" }}
-        >
-          <section className="section first-section">
-            <div className="container-fluid">
-              <div className="container">
-                <div className="row">
-                  {/* <div className="">
-                    <img src="https://cdn.dribbble.com/users/925704/screenshots/6513438/scrolling.gif" height={400} width={350} />
-                  </div> */}
-                  <div className="col-6">
-                    <h1 style={{ color: "darkred" }}>
-                      {/* Newseeker
-                      <hr /> */}
-                      Your Source for Timely and Reliable Online News
-                    </h1>
-                    <br />
-                    <br />
-                  </div>
-                </div>
-              </div>
+        
+        <div>
+            
+            <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src={pro8} height="520" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block ">
+              <h2 className="title">SMART JOURNALISM</h2>
+              <h4 className="title">
+                Journalism is always the art of the incomplete
+              </h4>
             </div>
+          </div>
+          <div class="carousel-item">
+            <img src={pro9} height="520" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>SMART JOURNALISM</h5>
+              <p>Join with our smart journalism comunity</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src={img11} height="520" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>SMART JOURNALISM</h5>
+              <p>Join with our smart journalism comunity</p>
+            </div>
+          </div>
+        </div>
+       
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+            
 
-            <Link to={`/login/Journalist`}>
-              <div className="container" id="hidediv">
-                <div class="row">
-                  <div class="column">
-                    <img
-                      src={`http://localhost:4001/${homenews[0].image}`}
-                      style={{ width: "100%" }}
-                    />
-                    <h5 class="card-title">{homenews[0].title}</h5>
-                    <img
-                      src={`http://localhost:4001/${homenews[1].image}`}
-                      style={{ width: "100%" }}
-                    />
-                    <h5 class="card-title">{homenews[1].title}</h5>
-                    <img
-                      src={`http://localhost:4001/${homenews[3].image}`}
-                      style={{ width: "100%" }}
-                    />
-                    <h5 class="card-title">{homenews[3].title}</h5>
-                    
-                  </div>
-                  <div class="column">
-                    <img
-                      src={`http://localhost:4001/${homenews[2].image}`}
-                      style={{ width: "100%" }}
-                    />
-                    <h5 class="card-title">{homenews[2].title}</h5>
-                    <img
-                      src={`http://localhost:4001/${homenews[4].image}`}
-                      style={{ width: "100%" }}
-                    />
-                    <h5 class="card-title">{homenews[4].title}</h5>
-                    <img
-                      src={`http://localhost:4001/${homenews[11].image}`}
-                      style={{ width: "100%" }}
-                    />
-                    <h5 class="card-title">{homenews[11].title}</h5>
-                  </div>
-                  <div class="column">
-                    <img
-                      src={`http://localhost:4001/${homenews[7].image}`}
-                      style={{ width: "100%" }}
-                    />
-                    <h5 class="card-title">{homenews[7].title}</h5>
-                    <img
-                      src={`http://localhost:4001/${homenews[5].image}`}
-                      style={{ width: "100%" }}
-                    />
-                    <h5 class="card-title">{homenews[5].title}</h5>
-                    <img
-                      src={`http://localhost:4001/${homenews[8].image}`}
-                      style={{ width: "100%" }}
-                    />
-                    <h5 class="card-title">{homenews[8].title}</h5>
-                  </div>
-                  <div class="column">
-                    <img
-                      src={`http://localhost:4001/${homenews[9].image}`}
-                      style={{ width: "100%" }}
-                    />
-                    <h5 class="card-title">{homenews[9].title}</h5>
-                    <img
-                      src={`http://localhost:4001/${homenews[10].image}`}
-                      style={{ width: "100%" }}
-                    />
-                    <h5 class="card-title">{homenews[10].title}</h5>
-                    <img
-                      src={`http://localhost:4001/${homenews[6].image}`}
-                      style={{ width: "100%" }}
-                    />
-                    <h5 class="card-title">{homenews[6].title}</h5>
-                  </div>
-                </div>
-              </div>
-              <div className="container text-center">
-                <div className="row">
-                  <div className="col">
-                    <Link
-                      to="/Login/Public"
-                      className="btn btn-primary"
-                      style={{ width: "60%", margin: "40px" }}
-                    >
-                      Login to See More News
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </Link>
+            <br></br>
 
-            {/* <div className="container" id="hidediv">
-              <div class="row">
-                <div class="column">
-                  <div class="card">
-                    <img src={`http://localhost:4001/${homenews[4].image}`} />
-                    <div class="card-body">
-                      <h5 class="card-title">{homenews[4].title}</h5>
+            <h3 className="ccc"> Latest News</h3>
+            <br></br>
+            <div class=" row row-cols-1 row-cols-md-3 g-4">
+              {homenews.map((a) => {
+                return (
+                  <div class="col-4 mt-2">
+                    <div class="card" className="hom1">
+                      <img
+                        src={`${url}/${a.image}`}
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body mt-4">
+                        <h5 class="card-title mb-2">{a.title}</h5>
+                        <p>
+                          {a.content.slice(0, 350)}
+                          <Link to={"/login/Public"}>...view more</Link>
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <div class="card">
-                    <img src={`http://localhost:4001/${homenews[3].image}`} />
-                    <div class="card-body">
-                      <h5 class="card-title">{homenews[3].title}</h5>{" "}
-                    </div>
-                  </div>
-                </div>
-
-                <div class="column">
-                  <div class="card">
-                    <img src={`http://localhost:4001/${homenews[2].image}`} />
-                    <div class="card-body">
-                      <h5 class="card-title">{homenews[2].title}</h5>{" "}
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img src={`http://localhost:4001/${homenews[3].image}`} />
-                    <div class="card-body">
-                      <h5 class="card-title">{homenews[3].title}</h5>{" "}
-                    </div>
-                  </div>
-                </div>
-
-                <div class="column">
-                  <div class="card">
-                    <img src={`http://localhost:4001/${homenews[1].image}`} />
-                    <div class="card-body">
-                      <h5 class="card-title">{homenews[1].title}</h5>{" "}
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img src={`http://localhost:4001/${homenews[4].image}`} />
-                    <div class="card-body">
-                      <h5 class="card-title">{homenews[4].title}</h5>{" "}
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img src={`http://localhost:4001/${homenews[2].image}`} />
-                    <div class="card-body">
-                      <h5 class="card-title">{homenews[2].title}</h5>{" "}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="container text-center">
-                <div className="row">
-                  <div className="col">
-                    <Link
-                      to="/Login/Public"
-                      className="btn btn-primary"
-                      style={{ width: "60%", margin: "40px" }}
-                    >
-                      Login to See More News
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div> */}
-          </section>
+                );
+              })}
+            </div>
+            <br></br>
+            <br></br>
+            <h4 className="ddd">
+              JOURNALISM IS ALWAYS THE ART OF THE INCOMPLETE
+            </h4>
+            <h5 className="ddd">
+              "Journalism is printing what someone else does not want
+              printed:everthing else is public relations"{" "}
+            </h5>
+            <br></br>
+            <br></br>
+            <About />
         </div>
       );
     } else {

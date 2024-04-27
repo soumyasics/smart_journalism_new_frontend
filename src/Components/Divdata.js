@@ -1,9 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axiosInstance from "../baseurl";
+import { ContextWrap } from "../App";
 
 function Divdata({ a, publicLog, category, mid }) {
   const Navigate = useNavigate();
+
+  const url=useContext(ContextWrap)
 
   useEffect(() => {
     if (localStorage.getItem("publiclogid") == null) {
@@ -36,7 +39,7 @@ function Divdata({ a, publicLog, category, mid }) {
             <div className="col-5">
             <Link to={`/ViewNews/${a._id}`}>
               <img
-                src={`http://localhost:4001/${a.image}`}
+                src={`${url}/${a.image}`}
                 alt=""
                 height={190}
                 width={`100%`}

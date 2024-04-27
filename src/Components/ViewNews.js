@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import axiosInstance from "../baseurl";
 
-function ViewNews() {
+function ViewNews({url}) {
   const { id } = useParams();
   const [news, setnews] = useState({ date: "21323123123", reviews: [1, 2, 3] });
   const [comment, setcomment] = useState("");
   const [test, settest] = useState(false);
+
+  
 
   useEffect(() => {
     axiosInstance
@@ -47,7 +49,7 @@ function ViewNews() {
           <div className="col-5">
             <div class="card">
               <img
-                src={`http://localhost:4001/${news.image}`}
+                src={`${url}/${news.image}`}
                 class="card-img-top"
                 alt="..."
                 width={400}

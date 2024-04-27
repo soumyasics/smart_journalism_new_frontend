@@ -11,7 +11,7 @@ function PublicHome() {
   const [allmedia, setallmedia] = useState([]);
 
   const [topmedia, settopmedia] = useState([]);
-  
+
   useEffect(() => {
     axiosInstance
       .post(`/viewMedias`)
@@ -65,7 +65,7 @@ function PublicHome() {
             id="btnradio1"
             autocomplete="off"
           />
-          <label class="btn btn-outline-danger" for="btnradio1">
+          <label class="btn btn-danger" for="btnradio1">
             All Category
           </label>
 
@@ -80,7 +80,7 @@ function PublicHome() {
             id="btnradio2"
             autocomplete="off"
           />
-          <label class="btn btn-outline-danger" for="btnradio2">
+          <label class="btn btn-danger" for="btnradio2">
             Politics
           </label>
 
@@ -95,7 +95,7 @@ function PublicHome() {
             id="btnradio3"
             autocomplete="off"
           />
-          <label class="btn btn-outline-danger" for="btnradio3">
+          <label class="btn btn-danger" for="btnradio3">
             Kerala
           </label>
 
@@ -110,7 +110,7 @@ function PublicHome() {
             id="btnradio4"
             autocomplete="off"
           />
-          <label class="btn btn-outline-danger" for="btnradio4">
+          <label class="btn btn-danger" for="btnradio4">
             India
           </label>
 
@@ -125,7 +125,7 @@ function PublicHome() {
             id="btnradio5"
             autocomplete="off"
           />
-          <label class="btn btn-outline-danger" for="btnradio5">
+          <label class="btn btn-danger" for="btnradio5">
             World
           </label>
 
@@ -140,7 +140,7 @@ function PublicHome() {
             id="btnradio6"
             autocomplete="off"
           />
-          <label class="btn btn-outline-danger" for="btnradio6">
+          <label class="btn btn-danger" for="btnradio6">
             Business
           </label>
 
@@ -155,7 +155,7 @@ function PublicHome() {
             id="btnradio7"
             autocomplete="off"
           />
-          <label class="btn btn-outline-danger" for="btnradio7">
+          <label class="btn btn-danger" for="btnradio7">
             Sports
           </label>
         </div>
@@ -163,7 +163,8 @@ function PublicHome() {
       {/* <hr/> */}
       <div class="container text-center">
         <div class="row">
-          <div class="col-2"
+          <div
+            class="col-2 mt-4"
             style={{
               height: "700px",
               background: "white",
@@ -188,7 +189,7 @@ function PublicHome() {
               }}
             />
             <label
-              class="btn btn-outline-danger"
+              class="btn btn-danger"
               for="all"
               style={{ width: "150px" }}
             >
@@ -210,7 +211,7 @@ function PublicHome() {
                     }}
                   />
                   <label
-                    class="btn btn-outline-danger"
+                    class="btn btn-danger"
                     for={a._id}
                     style={{ width: "150px" }}
                   >
@@ -231,17 +232,18 @@ function PublicHome() {
               }}
             />
             <label
-              class="btn btn-outline-danger"
+              class="btn btn-danger"
               for="freelance"
               style={{ width: "150px" }}
             >
               Freelance{" "}
             </label>
           </div>
-          <div class="col-8">
+          <div class="col-10 mt-2">
             <Content mediatype={mediatype} mediaid={mediaid} publicLog={true} />
           </div>
-          <div class="col-2"
+          {/* <div
+            class="col-2"
             style={{
               height: "700px",
               background: "black",
@@ -261,22 +263,25 @@ function PublicHome() {
                   return (
                     <div className="col-12">
                       <Link to={`/ViewNews/${a._id}`}>
-                      <div class="card">
-                        <img src={`http://localhost:4001/${a.image}`} class="card-img-top" alt="..." />
-                        <div class="card-body">
-                          <h6 class="card-title">{a.title}</h6>
-                          <p> {a.category}</p>
-                         
+                        <div class="card">
+                          <img
+                            src={`${url}/${a.image}`}
+                            class="card-img-top"
+                            alt="..."
+                          />
+                          <div class="card-body">
+                            <h6 class="card-title">{a.title}</h6>
+                            <p> {a.category}</p>
+                          </div>
                         </div>
-                      </div>
-                      <br/>
+                        <br />
                       </Link>
                     </div>
                   );
                 })}
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

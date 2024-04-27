@@ -1,21 +1,24 @@
 {
   "files": {
-    "main.css": "/projects/smart_journalism/static/css/main.c63cd93d.css",
-    "main.js": "/projects/smart_journalism/static/js/main.62946410.js",
-    "static/media/logmediaadmin.jpg": "/projects/smart_journalism/static/media/logmediaadmin.735f9ffc1d0676bcd731.jpg",
-    "static/media/about-2.jpg": "/projects/smart_journalism/static/media/about-2.068c731594cfc3bb8f1e.jpg",
-    "static/media/carousel-2.jpg": "/projects/smart_journalism/static/media/carousel-2.070aa2cb27ea7a1e72f7.jpg",
-    "static/media/carousel-3.jpg": "/projects/smart_journalism/static/media/carousel-3.2891a00066fdfafdc66e.jpg",
-    "static/media/carousel-1.jpg": "/projects/smart_journalism/static/media/carousel-1.83d2eaae0f540a46d536.jpg",
-    "static/media/about-1.jpg": "/projects/smart_journalism/static/media/about-1.925d94e5cfb1c0d6d4fe.jpg",
-    "static/media/bg.jpg": "/projects/smart_journalism/static/media/bg.d6a200e3f28660efe265.jpg",
-    "static/media/logjournalist.jpg": "/projects/smart_journalism/static/media/logjournalist.72d3d69bf1e9afa01a63.jpg",
-    "index.html": "/projects/smart_journalism/index.html",
-    "main.c63cd93d.css.map": "/projects/smart_journalism/static/css/main.c63cd93d.css.map",
-    "main.62946410.js.map": "/projects/smart_journalism/static/js/main.62946410.js.map"
+    "main.css": "/smart_journalism/static/css/main.440d4bc1.css",
+    "main.js": "/smart_journalism/static/js/main.221f0c7d.js",
+    "static/media/img11.jpg": "/smart_journalism/static/media/img11.a9c78bd4bb17411ab88f.jpg",
+    "static/media/pro4.jpg": "/smart_journalism/static/media/pro4.e9cc3d053c81644c879d.jpg",
+    "static/media/footer.png": "/smart_journalism/static/media/footer.ed629da9f52358230841.png",
+    "static/media/onfocus-video-bg.jpg": "/smart_journalism/static/media/onfocus-video-bg.875f3122fc13c63b08d9.jpg",
+    "static/media/pro3.jpg": "/smart_journalism/static/media/pro3.12a89b7e16fd005787df.jpg",
+    "static/media/LOGO2.gif": "/smart_journalism/static/media/LOGO2.0ac99423eea27830577f.gif",
+    "static/media/pro8.jpg": "/smart_journalism/static/media/pro8.d1acd9faba235a35de56.jpg",
+    "static/media/news3.jpg": "/smart_journalism/static/media/news3.a9567c90f56d1bfba7a4.jpg",
+    "static/media/pro9.jpg": "/smart_journalism/static/media/pro9.f6a234a6c6cc59b42fad.jpg",
+    "static/media/pro5.jpg": "/smart_journalism/static/media/pro5.a2294ba191db99b12cd1.jpg",
+    "static/media/onfocus-content-bg.jpg": "/smart_journalism/static/media/onfocus-content-bg.fc4ede47e28cc361ae20.jpg",
+    "index.html": "/smart_journalism/index.html",
+    "main.440d4bc1.css.map": "/smart_journalism/static/css/main.440d4bc1.css.map",
+    "main.221f0c7d.js.map": "/smart_journalism/static/js/main.221f0c7d.js.map"
   },
   "entrypoints": [
-    "static/css/main.c63cd93d.css",
-    "static/js/main.62946410.js"
+    "static/css/main.440d4bc1.css",
+    "static/js/main.221f0c7d.js"
   ]
 }

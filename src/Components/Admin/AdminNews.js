@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axiosInstance from "../../baseurl";
 import { useNavigate } from "react-router-dom";
 
-function AdminNews() {
+function AdminNews({url}) {
 
   const Navigate = useNavigate();
+
 
   useEffect(()=>{
     if(localStorage.getItem('adminlog')==null){
@@ -153,7 +154,7 @@ function AdminNews() {
                               </p>
                               <p class="card-text">{a.content}</p>
                               <img
-                                src={`http://localhost:4001/${a.image}`}
+                                src={`${url}/${a.image}`}
                                 height="200px"
                               />
                               <hr/>
@@ -199,7 +200,7 @@ function AdminNews() {
                               </p>
                               <p class="card-text">{a.content}</p>
                               <video
-                                src={`http://localhost:4001/${a.video.filename}`}
+                                src={`${url}/${a.video.filename}`}
                                 width="100%"
                                 height="550px"
                                 controls
@@ -274,7 +275,7 @@ function AdminNews() {
                               </p>
                               <p class="card-text">{a.content}</p>
                               <img
-                                src={`http://localhost:4001/${a.image}`}
+                                src={`${url}/${a.image}`}
                                 height="200px"
                               />
                             </div>
@@ -312,7 +313,7 @@ function AdminNews() {
                                 {a.loc}, {a.date}{" "}
                               </p>
                               <video
-                                src={`http://localhost:4001/${a.video.filename}`}
+                                src={`${url}/${a.video.filename}`}
                                 width="100%"
                                 height="550px"
                                 controls

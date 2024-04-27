@@ -77,9 +77,15 @@ function Content({ mediatype, mediaid, publicLog }) {
                   homenews.map((a) => {
                     if (mediatype == "all" && mediaid == "allmedia") {
                       return <Divdata a={a} publicLog={publicLog} />;
-                    } else if (mediatype == a.category && mediaid == "allmedia") {
+                    } else if (
+                      mediatype == a.category &&
+                      mediaid == "allmedia"
+                    ) {
                       return <Divdata a={a} publicLog={publicLog} />;
-                    } else if (mediatype == a.category && mediaid == "freelance") {
+                    } else if (
+                      mediatype == a.category &&
+                      mediaid == "freelance"
+                    ) {
                       if (a.mid == undefined) {
                         return <Divdata a={a} publicLog={publicLog} />;
                       }
@@ -107,7 +113,7 @@ function Content({ mediatype, mediaid, publicLog }) {
               </div>
             </div>
 
-            <h1 style={{ textAlign: "center", color: "black" }}>
+            <h1 style={{ textAlign: "center", color: "black",marginTop:'25px' }}>
               Featured Videos
             </h1>
             <hr />

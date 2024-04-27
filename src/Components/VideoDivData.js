@@ -1,8 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axiosInstance from "../baseurl";
+import { ContextWrap } from "../App";
 
 function VideoDivData({ a, publicLog, category, mid }) {
+  const url=useContext(ContextWrap)
+
   return (
     <div>
       <div className={`col-12`}>
@@ -12,7 +15,7 @@ function VideoDivData({ a, publicLog, category, mid }) {
               <div className="col-5">
                 <video width="100%" height="190">
                   <source
-                    src={`http://localhost:4001/${a.video.filename}`}
+                    src={`${url}/${a.video.filename}`}
                     type="video/mp4"
                   />
                   <source src="movie.ogg" type="video/ogg" />

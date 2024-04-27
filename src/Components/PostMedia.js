@@ -135,7 +135,7 @@ function PostMedia() {
                       <div class="card-body">
                         <form onSubmit={submitfn1}>
                           <div class="row row-space">
-                            <div class="col-12">
+                            <div class="col-6">
                               <div class="input-group">
                                 <label class="label"> Title</label>
                                 <input
@@ -147,7 +147,7 @@ function PostMedia() {
                                 />
                               </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-6">
                               <div class="input-group">
                                 <label class="label">Location</label>
                                 <input
@@ -259,7 +259,7 @@ function PostMedia() {
                       <div class="card-body">
                         <form onSubmit={submitfn2}>
                           <div class="row row-space">
-                            <div class="col-12">
+                            <div class="col-6">
                               <div class="input-group">
                                 <label class="label"> Title</label>
                                 <input
@@ -271,7 +271,7 @@ function PostMedia() {
                                 />
                               </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-6">
                               <div class="input-group">
                                 <label class="label">Location</label>
                                 <input

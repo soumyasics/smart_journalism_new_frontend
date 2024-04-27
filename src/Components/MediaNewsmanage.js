@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axiosInstance from "../baseurl";
 import { useNavigate } from "react-router-dom";
+import { ContextWrap } from "../App";
 
 
 function MediaNewsManage() {
+
+  const url=useContext(ContextWrap)
+
   const [AllNewsreq, setNewsreq] = useState([]); // by freelance
   const [AllVNewsReq, setVNewsreq] = useState([]); // by freelance
 
@@ -140,7 +144,7 @@ function MediaNewsManage() {
                       return (
                         <div class="col-6">
                           <div class="card" >
-                          <img src={`http://localhost:4001/${a.image}`} class="card-img-top" alt="..."/>
+                          <img src={`${url}/${a.image}`} class="card-img-top" alt="..."/>
                             <div class="card-body">
                               <h3 class="card-title">
                                 {a.title}{" "}
@@ -185,7 +189,7 @@ function MediaNewsManage() {
                           <div class="card" >
                            
                             <video width="100%" height="240" controls>
-                              <source src={`http://localhost:4001/${a.video.filename}`} type="video/mp4"/>
+                              <source src={`${url}/${a.video.filename}`} type="video/mp4"/>
                               <source src="movie.ogg" type="video/ogg"/>
                             Your browser does not support the video tag.
                             </video>

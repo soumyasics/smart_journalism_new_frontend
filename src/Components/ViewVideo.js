@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axiosInstance from "../baseurl";
 
-function ViewVideo() {
+function ViewVideo({url}) {
   const Navigate = useNavigate();
+
 
   useEffect(() => {
     if (
@@ -62,7 +63,7 @@ function ViewVideo() {
           <div className="col-9" style={{ margin: "auto" }}>
             <div class="card" style={{ width: "100%" }}>
               <video
-                src={`http://localhost:4001/${vnews.video.originalname}`}
+                src={`${url}/${vnews.video.originalname}`}
                 width="100%"
                 height="550px"
                 controls

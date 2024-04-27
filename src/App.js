@@ -1,16 +1,19 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
+
 
 import "./Assets/Styles/bootstrap.css";
 import "./Assets/Styles/font-awesome.min.css";
 
 import "./Assets/Styles/responsive.css";
 import "./Assets/Styles/colors.css";
-import "./Assets/Styles/style.css";
+
 import "./Assets/Styles/formpage.css";
+import "./Assets/Styles/style.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
 
 
 import Navbar from "./Components/Navbar/Navbar";
@@ -46,9 +49,19 @@ import AdminJournalistPlans from "./Components/Admin/AdminJournalistPlans";
 import Critical from "./Components/Critical";
 import ViewMyNewsMedia from "./Components/ViewMyNewsMedia";
 import ViewNewsByJournalist from "./Components/ViewNewsByJournalist";
+
+
+const ContextWrap=createContext()
+
+
 function App() {
   const [auth, setauth] = useState(0);
   const [username, setusername] = useState("");
+
+  const url='http://localhost:4001'
+
+  // const url='http://hybrid.srishticampus.in:4015'
+
   useEffect(() => {
     if (localStorage.getItem("adminlog") == 1) {
       setauth(4);
@@ -70,7 +83,8 @@ function App() {
 
 
   return (
-    <BrowserRouter basename="projects/smart_journalism">
+   
+      <BrowserRouter basename="smart_journalism">
       <div className="App">
         {/* <h1> {username}</h1>
         <button onClick={()=>{setauth(0)}}> Logout </button>
@@ -78,10 +92,10 @@ function App() {
         <button onClick={()=>{setauth(2)}}> Media Admin</button>
         <button onClick={()=>{setauth(3)}}> Public</button>
         <button onClick={()=>{setauth(4)}}> Admin</button> */}
-
+ <ContextWrap.Provider value={url}>
         <Navbar auth={auth} />
         <Routes>
-          <Route path="/" element={<Main auth={auth} />} />
+          <Route path="/" element={<Main auth={auth} url={url} />} />
           <Route path="/home" element={<Main auth={auth} />} />
           <Route path="/Admin" element={<AdminLog />} />
           <Route path="/Admin/Adminpage" element={<Adminpage />} />
@@ -89,7 +103,7 @@ function App() {
           <Route path="/admin/Journalist/Viewplan/:id" element={<AdminJournalistPlans />} />
 
          
-          <Route path="/admin/News" element={<AdminNews />} />
+          <Route path="/admin/News" element={<AdminNews url={url} />} />
 
           <Route path="/admin/MediaAdmin" element={<AdminMediaAdmin />} />
           <Route path="/admin/MediaAdmin/ViewMedia/:id" element={<ViewMediabyid />}/>
@@ -113,10 +127,10 @@ function App() {
           <Route path="/Media/ManageJournalists" element={<ManageJournalists />}/>
           <Route path="/Media/Profile" element={<MediaProfile />} />
           <Route path="/Media/Notification" element={<Critical />} />
-          <Route path="/Media/viewNewsByMedia" element={<ViewMyNewsMedia />} />
+          <Route path="/Media/viewNewsByMedia" element={<ViewMyNewsMedia url={url} />} />
 
 
-          <Route path="/Journalist/viewNewsByMedia" element={<ViewNewsByJournalist />} />
+          <Route path="/Journalist/viewNewsByMedia" element={<ViewNewsByJournalist url={url} />} />
         
 
 
@@ -124,16 +138,18 @@ function App() {
         
           <Route path="/Addpost" element={<PostMedia />} />
 
-          <Route path='ViewSavedNews' element={<ViewSavedNews/>}/>
+          <Route path='ViewSavedNews' element={<ViewSavedNews url={url} />}/>
 
-          <Route path={`/ViewNews/:id`} element={<ViewNews />} />
-          <Route path={`/ViewVideo/:id`} element={<ViewVideo />} />
+          <Route path={`/ViewNews/:id`} element={<ViewNews url={url} />} />
+          <Route path={`/ViewVideo/:id`} element={<ViewVideo url={url} />} />
           <Route path="/*" element={<div style={{minHeight:"500px", backgroundImage:"url('https://saturnvpn.com/wp-content/uploads/2017/10/fix-HTTP-404-Not-found-Error.jpg')", backgroundRepeat:"no-repeat"}}> No such page</div>}/>
         </Routes>
         <Footer auth={auth} />
+        </ContextWrap.Provider>
       </div>
-    </BrowserRouter>
+    </BrowserRouter>    
   );
 }
 
 export default App;
+export {ContextWrap}

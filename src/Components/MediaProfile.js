@@ -1,9 +1,12 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axiosInstance from "../baseurl";
+import { ContextWrap } from "../App";
 
 function MediaProfile() {
+
+  const url=useContext(ContextWrap)
 
   
   let navigate = useNavigate();
@@ -101,7 +104,7 @@ function MediaProfile() {
                         <img
                           height={80}
                           width={80}
-                          src={`http://localhost:4001/${data.img.filename}`}
+                          src={`${url}/${data.img.filename}`}
                         />{" "}
                       </span>
                       {data.name}{" "}

@@ -32,7 +32,7 @@ function RegMediaAdmin() {
       .then((res) => {
         console.log(res);
         if (res.data.status == 200) {
-           Navigate(`/VerificationMedia/${res.data.data._id}`);
+           Navigate(`/login/MediaAdmin}`);
         } else {
           alert("Couldn't Register. Please try again");
         }
@@ -49,7 +49,7 @@ function RegMediaAdmin() {
         backgroundImage:
           "url('https://cdn.dribbble.com/users/134487/screenshots/5489136/media/514ca2a361dbb3b81f6a5a2270caf29d.gif')",
         backgroundSize: "33%",
-        backgroundPosition: "left",
+        // backgroundPosition: "left",
         backgroundRepeat: "no-repeat",
       }}
     >
@@ -57,10 +57,10 @@ function RegMediaAdmin() {
         <div class="wrapper wrapper--w680">
           <div class="card card-4">
             <div class="card-body">
-              <h2 class="title">Media Admin Registration Form</h2>
+              <h2 class="title text-danger">Media Admin Registration Form</h2>
               <form onSubmit={subfn}>
                 <div class="row row-space">
-                  <div class="col-12">
+                  <div class="col-6">
                     <div class="input-group">
                       <label class="label"> Name</label>
                       <input
@@ -73,7 +73,7 @@ function RegMediaAdmin() {
                     </div>
                   </div>
 
-                  <div class="col-12">
+                  <div class="col-6">
                     <div class="input-group">
                       <label class="label"> Contact</label>
                       <input
@@ -87,7 +87,7 @@ function RegMediaAdmin() {
                       />
                     </div>
                   </div>
-                  <div class="col-12">
+                  <div class="col-6">
                     <div class="input-group">
                       <label class="label"> Email</label>
                       <input
@@ -99,7 +99,7 @@ function RegMediaAdmin() {
                       />
                     </div>
                   </div>
-                  <div class="col-12">
+                  <div class="col-6">
                     <div class="input-group">
                       <label class="label">Password</label>
                       <input
@@ -111,7 +111,7 @@ function RegMediaAdmin() {
                       />
                     </div>
                   </div>
-                  <div class="col-12">
+                  <div class="col-6">
                     <div class="input-group">
                       <label class="label">Registration Number</label>
                       <input
@@ -123,7 +123,7 @@ function RegMediaAdmin() {
                       />
                     </div>
                   </div>
-                  <div class="col-12">
+                  <div class="col-6">
                     <div class="input-group">
                       <label class="label">Website </label>
                       <input

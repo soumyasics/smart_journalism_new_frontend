@@ -1971,3 +1971,52 @@ body {
     max-width: 100%;
   }
 }
+
+.ccc{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  color: rgb(128, 4, 4);
+ }
+ .hom1{
+ margin-left: 35px;
+ 
+ }
+ .ddd{
+  text-align: center;
+  color: #000;
+ }
+ 
+ .bbb{
+  background-color: rgb(173, 5, 5);
+border: none;
+color: #e4dddd;
+position: relative;
+width: 209px;
+height: 34px;
+ }
+ .aaa{
+  text-align: center;
+ }
+ .title{
+color: #f0ecec;
+ }
+/*About*/
+
+.zzz{
+  
+  margin-right: 35px;
+  margin-left: 30px;
+margin-top: 25px;
+ }
+ .xyz{
+  text-align: justify;
+  color: #000;
+ }
+ .yyy{
+  text-align: right;
+  color: rgb(61, 37, 37);
+ }
+ .tit{
+  text-align:justify;
+ }
+
